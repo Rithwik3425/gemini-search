@@ -16,7 +16,7 @@ So here we are. An AI-powered terminal search that actually gives you what you a
 ## ✨ What It Does
 
 - **Direct Answers**: Ask "install docker on ubuntu" → Get the exact commands
-- **No BS**: Skip the "Docker is a containerization platform that..." essays  
+- **No BS**: Skip the "Docker is a containerization platform that..." essays
 - **Terminal Native**: Because leaving the terminal is for quitters
 - **Powered by Gemini**: Google's AI, but from your command line
 
@@ -35,6 +35,11 @@ cargo build --release
 
 # Use it
 ./target/release/gemini-search install alacritty on fedora
+
+# or do
+cargo install --path .
+# then do
+gemini-search install alacritty on fedora
 ```
 
 **Output:**
@@ -67,7 +72,7 @@ If you get OpenSSL errors (because Linux), just install the dev packages:
 # Fedora/RHEL
 sudo dnf install openssl-devel pkg-config
 
-# Ubuntu/Debian  
+# Ubuntu/Debian
 sudo apt install libssl-dev pkg-config
 
 # Arch (btw)
@@ -100,7 +105,7 @@ $ gemini-search install docker on fedora
   sudo systemctl start docker
 ```
 
-### Configuration Help  
+### Configuration Help
 ```bash
 $ gemini-search setup git ssh key
   ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -153,7 +158,7 @@ MIT - Do whatever you want with it. Just don't blame me if it formats your hard 
 
 If something breaks:
 1. Check if your API key is set
-2. Check if your internet works  
+2. Check if your internet works
 3. Open an issue with details
 4. Or fix it yourself and send a PR (preferred)
 
